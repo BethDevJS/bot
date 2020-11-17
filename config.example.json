@@ -3,5 +3,6 @@
     "mongoURI": "mongodb://hostname:port",
     "lavalinkNode": [],
     "status": "dnd",
+    "prefix": "g!",
     "allowedStatuses": ["online", "invisible", "dnd", "idle"]
 }

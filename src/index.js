@@ -1,14 +1,14 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('../config.json');
-const { readdirSync } = require("fs")
+const {readdirSync} = require('fs');
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  if (config.allowedStatuses.some(status => status !== config.status)) {
-    console.log("[Warning] The status has been set incorrectly, please refer to the config.json and pick a status")
-    config.status = "dnd"
+  if (!require('./functions/validateConfig')(config)) {
+    // eslint-disable-next-line max-len
+    throw new Error('Your config is incorrect! Please check it or use our config generator!');
   }
+  console.log(`Logged in as ${client.user.tag}!`);
   client.user.setPresence({
     activity: {name: 'https://github.com/good-discord-bot/bot', type: 'LISTENING'},
     status: config.status ? config.status : 'dnd'});
@@ -17,12 +17,12 @@ client.on('ready', () => {
   client.commands = new Discord.Collection();
   client.config = config;
 
-  // set command handler 
-  const cmdFiles = readdirSync("./commands").filter(f => f.endsWith(".js"));
+  // set command handler
+  const cmdFiles = readdirSync('./commands').filter((f) => f.endsWith('.js'));
   for (const file of cmdFiles) {
     const command = require(`./commands/${file}`);
     client.commands.set(command.name, command);
-    console.log(`${command.name} was loaded`)
+    console.log(`${command.name} was loaded`);
   };
 });
 
