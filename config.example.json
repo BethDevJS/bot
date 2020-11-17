@@ -1,6 +1,7 @@
 {
     "token": "<insert token here>",
-    "mongoURI": "",
+    "mongoURI": "mongodb://hostname:port",
     "lavalinkNode": [],
-    "status": "dnd"
+    "status": "dnd",
+    "allowedStatuses": ["online", "invisible", "dnd", "idle"]
 }
