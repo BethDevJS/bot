@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "mongoose": "^5.10.15"
+  }, 
+  "scripts": {
+      "start": "node index.js"
+  }, 
+  "devDependencies": {
+      "eslint": "7.13.0"
+  }
+}
