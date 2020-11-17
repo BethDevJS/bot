@@ -8,7 +8,12 @@ client.on('ready', () => {
   client.user.setPresence({
     activity: {name: 'https://github.com/good-discord-bot/bot', type: 'LISTENING'},
     status: config.status ? config.status : 'dnd'});
+
+  // hold info under client for global access
   client.commands = new Discord.Collection();
+  client.config = config;
+
+  // set command handler 
   const cmdFiles = readdirSync("./commands").filter(f => f.endsWith(".js"));
   for (const file of cmdFiles) {
     const command = require(`./commands/${file}`);
