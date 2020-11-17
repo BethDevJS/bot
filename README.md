@@ -33,4 +33,4 @@ This is case sensitive.
 
 #### Lavalink Node details
 
-You can get a Lavalink node to host [here](https://ci.fredboat.com/viewLog.html?buildId=lastSuccessful&buildTypeId=Lavalink_Build&tab=artifacts&guest=1#%2FLavalink.jar). You only need the Lavalink.jar and an application.yml, an example of such can be found [here](https://github.com/good-discord-bot/lavalink/blob/main/application.yml) .
+You can get a Lavalink node to host [here](https://ci.fredboat.com/viewLog.html?buildId=lastSuccessful&buildTypeId=Lavalink_Build&tab=artifacts&guest=1#%2FLavalink.jar). You only need the Lavalink.jar and an application.yml, an example of such can be found [here](https://github.com/good-discord-bot/lavalink/blob/main/application.yml).
