@@ -19,12 +19,20 @@ module.exports = () => {
     client.config = config;
 
     // set command handler
-    const cmdFiles = readdirSync('./commands')
+    const cmdFiles = readdirSync('./src/commands')
         .filter((f) => f.endsWith('.js'));
     for (const file of cmdFiles) {
       if (file.includes('music') && !config.lavalinkNode) return;
       const command = require(`./commands/${file}`);
       client.commands.set(command.name, command);
+      console.log(`${command.name} was loaded`);
+    };
+    const eventFiles = readdirSync('./src/events')
+        .filter((f) => f.endsWith('.js'));
+    for (const file of eventFiles) {
+      const event = require(`./event/${file}`);
+      const eventName = file.split('.')[0];
+      client.on(eventName, event.bind(null, client));
       console.log(`${command.name} was loaded`);
     };
   });
