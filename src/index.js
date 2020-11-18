@@ -40,5 +40,5 @@ module.exports = () => {
     console.error(err);
   });
 
-  client.login(config.token);
 };
+client.login(config.token);
