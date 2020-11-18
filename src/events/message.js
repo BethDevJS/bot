@@ -5,6 +5,6 @@ module.exports = (client, msg) => {
     const command = client.commands.get(args[0]) || client.commands.find(c => c.aliases == args[0]);
     return command.execute(client, msg, args)
   } catch {
-     return;
+    return;
   }
 }
