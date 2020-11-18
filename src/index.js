@@ -26,5 +26,8 @@ client.on('ready', () => {
   };
 });
 
+client.on("error", err => {
+  console.errot(err);
+});
 
 client.login(config.token);
