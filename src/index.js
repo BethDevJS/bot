@@ -29,6 +29,9 @@ module.exports = () => {
     };
   });
 
+client.on("error", err => {
+  console.errot(err);
+});
 
   client.login(config.token);
 };
