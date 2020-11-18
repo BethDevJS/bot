@@ -1,4 +1,4 @@
-/*
+/* See schema below.
     module.exports = {
         name: "name",
         aliases: ["al", "ia", "ses"],

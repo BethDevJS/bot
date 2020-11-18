@@ -38,3 +38,10 @@ You can get a Lavalink node to host [here](https://ci.fredboat.com/viewLog.html?
 #### Still struggling?
 
 Don't worry! We'll be making a way to generate a config online soon!
+
+## Pull Requests
+### Commands
+All commands must follow /src/commands/command.schema.js
+All music commands must have a name of <commandName>.music.js
+### Others
+You must use eslint to lint your code.

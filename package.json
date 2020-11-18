@@ -1,12 +1,13 @@
 {
   "dependencies": {
     "discord.js": "^12.4.1",
+    "erela.js": "^2.2.0",
     "mongoose": "^5.10.15"
-  }, 
+  },
   "scripts": {
-      "start": "node index.js"
-  }, 
+    "start": "node index.js"
+  },
   "devDependencies": {
-      "eslint": "7.13.0"
+    "eslint": "7.13.0"
   }
 }
