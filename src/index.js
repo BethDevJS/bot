@@ -33,7 +33,6 @@ module.exports = () => {
       const event = require(`./event/${file}`);
       const eventName = file.split('.')[0];
       client.on(eventName, event.bind(null, client));
-      console.log(`${command.name} was loaded`);
     };
   });
 
